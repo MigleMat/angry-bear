@@ -1,0 +1,40 @@
+@use "../base/variables" as vars;
+
+.switch {
+  position: relative;
+
+  &__input {
+    display: none;
+
+    &:checked + .switch__label {
+      background-color: vars.$on-color;
+
+      //knob!!!!
+      &::after {
+        transform: translate(50px, 0);
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: vars.$off-color;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+
+    // knob!!!!
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 44px;
+      height: 44px;
+      background-color: vars.$knob-color;
+      border-radius: 50%;
+    }
+  }
+}
