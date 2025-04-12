@@ -166,6 +166,29 @@
 }
 
 .switch__bear--furious {
-  background-color: #3b1a15;
+  background-color: #972c1c;
   animation: shake 0.2s ease-in-out infinite;
+}
+
+.switch__bubble {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 2px solid red;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  font-family: monospace;
+}
+
+.switch .switch__bubble {
+  transform: scale(1);
+  opacity: 1;
 }
