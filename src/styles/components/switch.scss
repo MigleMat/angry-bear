@@ -37,4 +37,55 @@
       border-radius: 50%;
     }
   }
+
+  &__bear {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+  }
+
+  &__bear-head {
+    background-color: rgb(92 61 46);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  &__ear {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(92 61 46);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+
+    &--left {
+      left: -5px;
+    }
+
+    &--right {
+      right: -5px;
+    }
+  }
+
+  &__eyes {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+  }
+
+  &__eye {
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+  }
 }
