@@ -151,12 +151,21 @@
 
     &--left {
       left: 5px;
-      transform: translateY(30px);
+      transform: translateY(5px);
     }
 
     &--right {
       right: 5px;
-      transform: translateY(30px);
+      transform: translateY(5px);
     }
   }
+}
+
+.switch__bear--annoyed {
+  background-color: #4a2e24;
+}
+
+.switch__bear--furious {
+  background-color: #3b1a15;
+  animation: shake 0.2s ease-in-out infinite;
 }
