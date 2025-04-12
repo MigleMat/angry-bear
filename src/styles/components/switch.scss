@@ -24,6 +24,26 @@
     &__input:checked + .switch__label .switch__paw--right {
       transform: translateY(0);
     }
+
+    :checked + .switch__label {
+      .switch__eyes-happy {
+        opacity: 1;
+      }
+
+      .switch__eyes-angry {
+        opacity: 0;
+      }
+    }
+
+    :not(:checked) + .switch__label {
+      .switch__eyes-happy {
+        opacity: 0;
+      }
+
+      .switch__eyes-angry {
+        opacity: 1;
+      }
+    }
   }
 
   &__label {
@@ -85,7 +105,7 @@
     }
   }
 
-  &__eyes {
+  &__eyes-happy {
     position: absolute;
     top: 20px;
     left: 50%;
@@ -93,6 +113,19 @@
     display: flex;
     justify-content: space-between;
     width: 30px;
+    transition: opacity 0.3s ease;
+  }
+
+  &__eyes-angry {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
   }
 
   &__eye {
@@ -100,6 +133,11 @@
     height: 6px;
     background-color: black;
     border-radius: 50%;
+
+    &--angry {
+      transform: rotate(45deg) skewY(15deg);
+      background-color: rgb(234, 56, 41);
+    }
   }
 
   &__paw {
